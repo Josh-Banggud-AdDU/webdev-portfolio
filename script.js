@@ -28,24 +28,3 @@ document.addEventListener('DOMContentLoaded', function(){
         hoverObject.style.boxShadow = 'none';
     });
 });
-
-document.addEventListener('DOMContentLoaded', function(){
-    const project = document.getElementById('p-01');
-    const tDiv = document.getElementById('p-titleContainer');
-    const textDiv = project.firstElementChild;
-    const pTag = textDiv.querySelector('p');
-
-    project.addEventListener('mouseover', () => {
-        setTimeout(function(){
-            pTag.classList.remove("opacity-0");
-            pTag.classList.add("opacity-100");
-            tDiv.classList.remove("translate-y-1/2");
-        }, 10);
-    });
-
-    project.addEventListener('mouseleave', () =>{
-        pTag.classList.remove("opacity-100");
-        pTag.classList.add("opacity-0");
-        tDiv.classList.add("translate-y-1/2");
-    });
-});
